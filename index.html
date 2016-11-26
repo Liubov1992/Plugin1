@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+div{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    text-align: right;
+}
+    .menu{
+        letter-spacing: normal;
+        padding: 0;
+        margin: 0;
+    }
+    div>a{
+        float: left;
+    }
+
+    ul li{
+        display: inline-block;
+    }
+    ul li a{
+        display: block;
+        text-transform: uppercase;
+        padding: 0 20px;
+        color: black;
+        text-decoration: none;
+        transition: all .3s;
+    }
+    ul li a:hover{
+        background-color: #333;
+        color: white;
+    }
+    section{
+        height: 100vh;
+    }
+    section:nth-child(odd){
+        
+        background-color: crimson;
+    }
+    section:nth-child(even){
+        background-color: skyblue;
+    }
+    .toTop{
+        position: fixed;
+        z-index: 100;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        color: aliceblue;
+        background-color: dimgrey;
+        border: none;
+        border-radius: 10px;
+        display: none;
+    }
+
+</style>
+<body>
+    <div>
+<a href="google.com">Logo</a>
+    <ul class="menu">
+       <li><a href="#section1">section1</a></li>
+       <li><a href="#section2">section2</a></li>
+       <li><a href="#section3">section3</a></li>
+       <li><a href="#section4">section4</a></li>
+   </ul>
+    </div>
+    <button href='#section1' class="toTop">Up</button>
+    <section id="section1"></section>
+    <section id="section2"></section>
+    <section id="section3"></section>
+    <section id="section4"></section>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/jquery.scrollPlug.js"></script>
+<script>
+$('.menu a').scrollPlug();
+    $('.toTop').scrollPlug();
+    
+</script>
+
+</body>
+</html>
